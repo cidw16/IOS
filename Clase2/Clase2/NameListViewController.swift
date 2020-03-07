@@ -11,6 +11,7 @@ import UIKit
 class NameListViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
+    var personList = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +46,27 @@ class NameListViewController: UIViewController {
 
 extension NameListViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return personList.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "")!
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+            else {
+                return UITableViewCell()
+        }
+        let person = personList[indexPath.row]
+        cell.textLabel?.text=person.name
+        
+        return cell
     }
 }
 
 extension NameListViewController:AddNameViewControllerDelegate{
+    
     func addPerson(person: Person) {
-        print(person.name)
+        self.personList.append(person)
+        TableView.reloadData()
     }
 }
