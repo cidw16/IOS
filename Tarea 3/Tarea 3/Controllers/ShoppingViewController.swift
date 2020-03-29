@@ -91,9 +91,12 @@ extension ShoppingViewController: UITableViewDelegate, UITableViewDataSource {
 extension ShoppingViewController: AddProductsViewControllerProtocol {
     func addProduct(product: Product) {
         
-        
-            productList.append(product)
-            navigationController?.popViewController(animated: true)
+        productList.append(product)
+        let orderedList = productList.sorted(by: {$0.date > $1.date})
+            
+        productList = orderedList
+            
+        navigationController?.popViewController(animated: true)
             shoppingTableView.reloadData()
         
     }
