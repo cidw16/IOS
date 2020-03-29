@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n9F-lp-bYb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7ml-BI-64c">
+            <objects>
+                <navigationController id="n9F-lp-bYb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qoY-QE-wOS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uvi-c0-3x6" kind="relationship" relationship="rootViewController" id="h2y-3d-yUq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lb9-PZ-cXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1287" y="26"/>
+        </scene>
+        <!--Shopping View Controller-->
+        <scene sceneID="kjR-mX-cAo">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvi-c0-3x6" customClass="ShoppingViewController" customModule="Tarea_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HIe-Y9-Y35">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-WC-exe">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtT-aJ-9Un">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-Kh-hWv">
+                                        <rect key="frame" x="0.0" y="58.5" width="382" height="683.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="uvi-c0-3x6" id="mcp-Rf-dw3"/>
+                                            <outlet property="delegate" destination="uvi-c0-3x6" id="sRy-yK-CL9"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SPM-0z-5bU" firstAttribute="bottom" secondItem="UG4-WC-exe" secondAttribute="bottom" constant="16" id="244-N0-ehE"/>
+                            <constraint firstItem="UG4-WC-exe" firstAttribute="leading" secondItem="SPM-0z-5bU" secondAttribute="leading" constant="16" id="MU0-je-EAf"/>
+                            <constraint firstItem="UG4-WC-exe" firstAttribute="top" secondItem="SPM-0z-5bU" secondAttribute="top" constant="16" id="dgm-1c-Z2V"/>
+                            <constraint firstItem="SPM-0z-5bU" firstAttribute="trailing" secondItem="UG4-WC-exe" secondAttribute="trailing" constant="16" id="nG0-IY-wnv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SPM-0z-5bU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0ly-X5-FhU"/>
+                    <connections>
+                        <outlet property="shoppingTableView" destination="S0R-Kh-hWv" id="ppZ-QB-P8t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9Y-RR-pU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="25"/>
+        </scene>
+        <!--Add Product Table View Controller-->
+        <scene sceneID="rev-nx-PGp">
+            <objects>
+                <viewController storyboardIdentifier="AddProductTableViewController" id="5Sz-N2-zY3" customClass="AddProductTableViewController" customModule="Tarea_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NSy-eE-oSz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j4Z-IC-AsL">
+                                <rect key="frame" x="16" y="60" width="382" height="222.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhp-GA-neH">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjM-he-DZe">
+                                        <rect key="frame" x="0.0" y="53.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLQ-6n-tPr">
+                                        <rect key="frame" x="0.0" y="94" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-ZM-AJm">
+                                        <rect key="frame" x="0.0" y="148" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgK-vQ-B7Y">
+                                        <rect key="frame" x="0.0" y="188.5" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j4Z-IC-AsL" firstAttribute="leading" secondItem="b7F-Ac-WKf" secondAttribute="leading" constant="16" id="pGJ-YB-C58"/>
+                            <constraint firstItem="b7F-Ac-WKf" firstAttribute="trailing" secondItem="j4Z-IC-AsL" secondAttribute="trailing" constant="16" id="wel-g9-FWk"/>
+                            <constraint firstItem="j4Z-IC-AsL" firstAttribute="top" secondItem="b7F-Ac-WKf" secondAttribute="top" constant="16" id="ylX-ZV-LMi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7F-Ac-WKf"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="DLQ-6n-tPr" id="M48-ch-E6o"/>
+                        <outlet property="quantityTextField" destination="TgK-vQ-B7Y" id="k4i-xR-3of"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYs-YN-svl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="571.01449275362324" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+</document>
