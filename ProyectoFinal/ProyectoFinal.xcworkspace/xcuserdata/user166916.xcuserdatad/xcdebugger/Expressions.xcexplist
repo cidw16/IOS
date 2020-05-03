@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AddExpensesViewController.fillValues():AddExpensesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "remainingDays.text">
+            </PersistentString>
+            <PersistentString
+               value = "timeInterval.stringFromTimeInterval()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HistoryHeaderTableViewCell.setupCell(budget:):HistoryHeaderTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "budget.name">
+            </PersistentString>
+            <PersistentString
+               value = "nameLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BudgetTableViewCell.SetupCell(budget:):BudgetTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "budget.amount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HistoryTableViewCell.setupCell(transaction:):HistoryTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "transaction.amount">
+            </PersistentString>
+            <PersistentString
+               value = "amountLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BudgetViewController.addBudgets():BudgetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "budgets[1].transactions[0].amount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
