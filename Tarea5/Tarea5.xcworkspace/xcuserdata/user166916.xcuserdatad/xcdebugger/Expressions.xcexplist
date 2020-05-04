@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in static APIManager.makeRequestToGetWeatherToTheAPI(completionHandler:):APIManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Weather.init(dictionary:):Weather.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dt">
+            </PersistentString>
+            <PersistentString
+               value = "sunrise">
+            </PersistentString>
+            <PersistentString
+               value = "dictionary[WeatherKeys.dt]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
